@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Hospital</title>
+        <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+        <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.4.0/css/all.css"/>
+        <link rel="stylesheet" href="phar.css">
+    </head>
+    <body>
+        <input type="checkbox" id="nav-toggle">
+        <div class="sidebar">
+            <div class="sidebar-name">
+                <h2><i class="fa-regular fa-capsules" style="font-size: 30px;"></i><span>Welcare</span></h2>
+            </div>
+            <div class="sidebar-menu">
+                <ul>
+                    <li>
+                        <a href="docdash.html"><span class="fa-regular fa-igloo"></span><span>Dashboard</span></a>
+                    </li>
+                    <li>
+                        <a href="docpat.html"><span class="fa-solid fa-users-medical" style="margin-left: -5px;"></span><span>Patients</span></a>
+                    </li>
+                    <li>
+                        <a href="docmed.html" class="active"><span class="fa-solid fa-folder-medical" style="margin-left: -2px;"></span><span>Medicene</span></a>
+                    </li>
+                    <li>
+                        <a href="" style="padding-top: 300px; padding-left: 25px;"><span class="fa-light fa-right-from-bracket"></span><span>Log out</span></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="main-content">
+            <header>
+                <h2>
+                    <label for="nav-toggle">
+                        <span class="las la-bars"></span>
+                    </label>
+                    Medicene
+                </h2>
+                <div class="search-wrapper">
+                    <span class="las la-search"></span>
+                    <input type="search" placeholder="Search here" />
+                </div>
+                <div class="user-wrapper">
+                    <i class="fa-duotone fa-user-doctor" style="width: 30px; height: 30px; padding-top: 5px;font-size: 20px;"></i>
+                    <!-- <img src="" width="30px" height="30px" alt=""> -->
+                    <div>
+                        <h5>Thilak</h5>
+                    </div>
+                </div>
+            </header>
+            <main>
+                <div class="racent-grid">
+                    <div class="customers">
+                        <div class="cerd">
+                            <div class="card-header">
+                                <h3>Medicene Available</h3>
+
+                                <!-- <button class="org-js">Add Medicene <span class="las la-plus"></span> </button> -->
+                            </div>
+                            <div class="card-body">
+                                <div class="table-responsive">
+                                <table width="100%">
+                                    <thead>
+                                        <tr>
+                                            <td>Mediciene Name</td>
+                                            <td>Timing</td>
+                                            <td>Stock Availability</td>
+                                            <td>Quantity</td>
+                                            <td></td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Dolo</td>
+                                            <td><input type="checkbox" name="M" value="M"/>    
+                                                <label>Morning</label> <br>    
+                                             <input type="checkbox" name="A" value="A"/>    
+                                                <label>Afternoon</label> <br>    
+                                             <input type="checkbox" name="N" value="N"/>    
+                                                <label>Night</label> <br></td>
+                                            <td>650</td>
+                                            <td><input type="number" placeholder="Enter Qty"/>
+                                            <td><button style="background-color: #DD2F6E; border-radius: 100px; padding: 3px 10px 3px 10px;;margin-top: 20px;border: 1px solid white;"
+                                                onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#000'" class="org-js">Add</button></td>
+                                            
+                                            <!-- <td><i class="fa-regular fa-indian-rupee-sign"></i>
+                                              59</td>
+                                            <td><i class="las la-trash abou"></i></td> -->
+                                        </tr>
+                                        <tr>
+                                            <td>45</td>
+                                            <td>Pharacetamol</td>
+                                            <td>500</td>
+                                            <!-- <td><i class="fa-regular fa-indian-rupee-sign"></i>
+                                              100</td>
+                                            <td><i class="las la-trash abou"></i></td> -->
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+             
+                <!----side menu---->
+                <div class="side-menu1 organize">
+                    <input type="hidden" id="pop">
+                    <div class="close-side-menu-1 close-side-menu"><i class="fas fa-times"></i></div>
+                    <p style="font-size: 30px;font-weight: 600;color: #fff;">Add Cart</p><br><br>
+                    <table>
+                        <tr>
+                            <th>Med_name</th>
+                            <th>Qty</th>
+                            <th></th>
+                        </tr>
+                        <tr>
+                            <td>Dolo</td>
+                            <td>8</td>
+                            <td><i class="las la-trash abou"></i></td>
+                        </tr>
+                        
+                    </table>
+                    <!-- <button type="submit" class="o-btn-sub">Create</button> -->
+                </div>
+            </main>
+        </div>
+    </body>
+    <script>
+        document.querySelector(".org-js").onclick = () => {
+            document.querySelector(".organize").style.visibility = "visible";
+              }
+        document.querySelector(".close-side-menu-1").onclick = () => {
+            document.querySelector(".organize").style.visibility = "hidden";
+              }
+        
+        
+    </script>
+</html>
